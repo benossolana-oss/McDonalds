@@ -1,0 +1,1019 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Bungee+Shade&family=Fredoka+One:wght@400&display=swap');
+
+:root {
+  --mcdonalds-red: #FF0000;
+  --mcdonalds-yellow: #FFD700;
+  --chaos-red: #FF3131;
+  --neon-yellow: #FFFF00;
+  --glitch-red: #FF0066;
+  --toxic-yellow: #CCFF00;
+  --telegram-blue: #0088CC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23FFD700" stroke="%23FF0000" stroke-width="3"><circle cx="12" cy="12" r="10" /><text x="12" y="16" text-anchor="middle" font-size="12" fill="%23FF0000">🍟</text></svg>') 12 12, auto;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow);
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%, 0 45%, 100% 45%, 100% 85%, 0 85%);
+  }
+  5% {
+    text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow);
+    clip-path: polygon(0 15%, 100% 15%, 100% 35%, 0 35%, 0 65%, 100% 65%, 100% 85%, 0 85%);
+  }
+  10% { text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow); }
+  15% { text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow); }
+  20% {
+    text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow);
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%, 0 65%, 100% 65%, 100% 100%, 0 100%);
+  }
+  25% { text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow); }
+  30% { text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow); }
+  35% {
+    text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow);
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 65%, 0 75%, 100% 75%, 100% 100%, 0 100%);
+  }
+  40% { text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow); }
+  45% { text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow); }
+  50% {
+    text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow);
+    clip-path: polygon(0 15%, 100% 15%, 100% 45%, 0 45%, 0 75%, 100% 75%, 100% 85%, 0 85%);
+  }
+  55% { text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow); }
+  60% {
+    text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%, 0 65%, 100% 65%, 100% 100%, 0 100%);
+  }
+  65% { text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow); }
+  70% { text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow); }
+  75% { text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow); }
+  80% {
+    text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow);
+    clip-path: polygon(0 15%, 100% 15%, 100% 55%, 0 55%, 0 65%, 100% 65%, 100% 85%, 0 85%);
+  }
+  85% { text-shadow: 3px 0 0 var(--mcdonalds-red), -3px 0 0 var(--mcdonalds-yellow); }
+  90% { text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow); }
+  95% { text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow); }
+  100% {
+    text-shadow: -3px 0 0 var(--mcdonalds-red), 3px 0 0 var(--mcdonalds-yellow);
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%, 0 55%, 100% 55%, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px) rotate(-2deg); }
+  20%, 40%, 60%, 80% { transform: translateX(5px) rotate(2deg); }
+}
+
+@keyframes colorCycle {
+  0% { color: var(--mcdonalds-red); }
+  50% { color: var(--mcdonalds-yellow); }
+  100% { color: var(--mcdonalds-red); }
+}
+
+@keyframes backgroundCycle {
+  0% { background-color: rgba(255, 0, 0, 0.1); }
+  50% { background-color: rgba(255, 215, 0, 0.1); }
+  100% { background-color: rgba(255, 0, 0, 0.1); }
+}
+
+@keyframes rotateSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-100%) scale(0.8); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px var(--mcdonalds-yellow); }
+  50% { box-shadow: 0 0 40px var(--mcdonalds-red), 0 0 60px var(--mcdonalds-yellow); }
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  /* Removed the heavy background gradient to let your custom image show */
+  background: transparent;
+  font-family: 'Fredoka One', 'Creepster', cursive;
+  color: white;
+}
+
+/* Custom background image support - Your image will show here! */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/backround.jpg'), url('/images/background.jpg'), url('/images/background.png'), url('/images/background.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -10;
+  opacity: 1;
+  filter: saturate(2.5) contrast(1.3) hue-rotate(10deg) brightness(1.2);
+}
+
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  background: transparent;
+}
+
+.glitch-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 0, 0, 0.05) 0%, transparent 50%),
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='rgba(255, 215, 0, 0.1)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)' /%3E%3C/svg%3E");
+  z-index: -5;
+  animation: backgroundCycle 2s infinite;
+}
+
+.glitch-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, var(--mcdonalds-red), var(--mcdonalds-yellow), var(--mcdonalds-red));
+  animation: scanline 3s linear infinite;
+  z-index: 1;
+  box-shadow: 0 0 20px var(--mcdonalds-yellow);
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.main-title-container {
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+/* Contract Address Banner Styles */
+.contract-address-banner {
+  background: linear-gradient(45deg, var(--mcdonalds-red), var(--mcdonalds-yellow), var(--mcdonalds-red));
+  background-size: 200% 200%;
+  animation: backgroundCycle 2s infinite, slideIn 1s ease-out, glow 3s infinite;
+  border: 5px solid var(--mcdonalds-yellow);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 
+    0 0 30px var(--mcdonalds-yellow),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-1deg);
+}
+
+.contract-address-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: slideIn 2s infinite;
+}
+
+.ca-label {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 1.2rem;
+  color: var(--mcdonalds-red);
+  font-weight: bold;
+  text-shadow: 
+    2px 2px 0 var(--mcdonalds-yellow),
+    4px 4px 10px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+.ca-address {
+  font-family: 'Fredoka One', monospace;
+  font-size: 1rem;
+  color: var(--mcdonalds-yellow);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 3px solid var(--mcdonalds-red);
+  margin: 0.5rem 0;
+  word-break: break-all;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 
+    0 0 10px var(--mcdonalds-yellow),
+    2px 2px 0 var(--mcdonalds-red);
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+.ca-address:hover {
+  background: var(--mcdonalds-yellow);
+  color: var(--mcdonalds-red);
+  transform: scale(1.05);
+  animation: shake 0.5s infinite, flash 0.3s infinite;
+  box-shadow: 
+    0 0 40px var(--mcdonalds-red),
+    inset 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.ca-copy-hint {
+  font-family: 'Creepster', cursive;
+  font-size: 0.9rem;
+  color: var(--mcdonalds-red);
+  font-weight: bold;
+  text-shadow: 
+    1px 1px 0 var(--mcdonalds-yellow),
+    0 0 10px var(--mcdonalds-red);
+  animation: bounce 2s infinite, colorCycle 3s infinite;
+  margin-top: 0.5rem;
+}
+
+.title-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.chip-logo-container {
+  flex-shrink: 0;
+}
+
+.chip-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 5px solid var(--mcdonalds-yellow);
+  border-radius: 15px;
+  box-shadow: 0 0 30px var(--mcdonalds-yellow);
+  animation: pulse 2s infinite, rotateSpin 10s linear infinite;
+  filter: saturate(2) contrast(1.3) drop-shadow(0 0 20px var(--mcdonalds-red));
+}
+
+.title-text {
+  flex: 1;
+}
+
+.main-title {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 6rem;
+  font-weight: bold;
+  color: var(--mcdonalds-yellow);
+  text-shadow: 
+    0 0 30px var(--mcdonalds-yellow),
+    0 0 60px var(--mcdonalds-yellow),
+    5px 5px 0 var(--mcdonalds-red),
+    10px 10px 0 var(--mcdonalds-yellow),
+    15px 15px 20px rgba(0, 0, 0, 0.8);
+  position: relative;
+  letter-spacing: 0.5rem;
+  line-height: 1;
+  animation: glitch 2s infinite, pulse 1s infinite;
+  transform: skew(-5deg);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 15px;
+  border: 3px solid var(--mcdonalds-yellow);
+}
+
+.main-title-sub {
+  font-family: 'Nosifer', cursive;
+  font-size: 4rem;
+  color: var(--mcdonalds-red);
+  text-shadow: 
+    0 0 30px var(--mcdonalds-red),
+    0 0 60px var(--mcdonalds-red),
+    3px 3px 0 var(--mcdonalds-yellow),
+    6px 6px 20px rgba(0, 0, 0, 0.8);
+  animation: shake 0.5s infinite, colorCycle 2s infinite;
+  margin-top: -1rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 3px solid var(--mcdonalds-red);
+}
+
+.mcdc-ticker {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3rem;
+  color: var(--mcdonalds-yellow);
+  text-shadow: 
+    0 0 40px var(--mcdonalds-yellow),
+    0 0 80px var(--mcdonalds-yellow),
+    3px 3px 0 var(--mcdonalds-red),
+    6px 6px 0 var(--mcdonalds-yellow);
+  animation: flash 1s infinite, pulse 2s infinite;
+  margin-top: 0.5rem;
+  background: rgba(255, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: 4px solid var(--mcdonalds-yellow);
+  display: inline-block;
+  transform: rotate(-2deg);
+}
+
+.title-effects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.glitch-text {
+  font-family: 'Creepster', cursive;
+  font-size: 2rem;
+  animation: glitch 1s infinite, flash 0.5s infinite;
+  text-shadow: 
+    0 0 20px currentColor,
+    2px 2px 0 var(--mcdonalds-red);
+}
+
+.spinning-burger {
+  font-size: 3rem;
+  animation: rotateSpin 2s linear infinite, bounce 1s infinite;
+  filter: drop-shadow(0 0 20px var(--mcdonalds-yellow));
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 4rem;
+  }
+  .main-title-sub {
+    font-size: 2.5rem;
+  }
+  .mcdc-ticker {
+    font-size: 2rem;
+  }
+  .title-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .chip-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .ca-address {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .ca-label {
+    font-size: 1rem;
+  }
+  .contract-address-banner {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.nav-button {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  border: 5px solid var(--mcdonalds-yellow);
+  background: var(--mcdonalds-red);
+  color: var(--mcdonalds-yellow);
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: pulse 2s infinite;
+  position: relative;
+  overflow: hidden;
+  transform: skew(-5deg);
+  text-shadow: 2px 2px 0 var(--mcdonalds-red);
+  box-shadow: 0 0 20px var(--mcdonalds-yellow);
+}
+
+.nav-button:hover, .nav-button:focus {
+  background: var(--mcdonalds-yellow);
+  color: var(--mcdonalds-red);
+  animation: shake 0.5s infinite, flash 0.2s infinite;
+  box-shadow: 0 0 30px var(--mcdonalds-red);
+  border-color: var(--mcdonalds-red);
+}
+
+.nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.5s;
+}
+
+.nav-button:hover::before {
+  left: 100%;
+}
+
+.nav-button-active {
+  background: var(--mcdonalds-yellow);
+  color: var(--mcdonalds-red);
+  box-shadow: 0 0 30px var(--mcdonalds-yellow);
+  animation: flash 0.5s infinite;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: colorCycle 3s infinite;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 var(--mcdonalds-red);
+}
+
+.frog-of-the-day {
+  border: 5px solid var(--mcdonalds-yellow);
+  padding: 1rem;
+  background: rgba(255, 0, 0, 0.8);
+  animation: backgroundCycle 5s infinite, pulse 2s infinite;
+  margin-bottom: 1rem;
+  height: auto;
+  min-height: 200px;
+  box-shadow: 0 0 30px var(--mcdonalds-yellow);
+  transform: rotate(-1deg);
+  backdrop-filter: blur(1px);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1rem auto;
+  border: 3px solid var(--mcdonalds-yellow);
+  border-radius: 10px;
+  box-shadow: 0 0 25px var(--mcdonalds-yellow);
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  /* Fixed aspect ratio container */
+  aspect-ratio: 16 / 9;
+}
+
+.burger-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from cover to contain to fit properly */
+  border-radius: 5px;
+  /* Reduced effects for clearer video */
+  filter: saturate(1.2) contrast(1.1) brightness(1.05);
+  /* Removed heavy glitch animation for clarity */
+  background: #000; /* Black background for letterboxing if needed */
+}
+
+.frog-image-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 3px solid var(--mcdonalds-yellow);
+  animation: shake 3s infinite;
+}
+
+.frog-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: saturate(2) contrast(1.5) hue-rotate(45deg);
+  animation: glitch 5s infinite;
+}
+
+.frog-caption {
+  font-size: 1rem;
+  color: var(--mcdonalds-yellow);
+  text-align: center;
+  margin-top: 1rem;
+  animation: colorCycle 4s infinite, flash 2s infinite;
+  text-shadow: 2px 2px 0 var(--mcdonalds-red);
+  font-weight: bold;
+}
+
+.fein-frog-speaks {
+  border: 5px solid var(--mcdonalds-red);
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.8);
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 30px var(--mcdonalds-red);
+  transform: rotate(1deg);
+  animation: shake 4s infinite;
+  backdrop-filter: blur(1px);
+}
+
+.prophecy-scroll {
+  height: calc(100% - 3rem);
+  overflow-y: auto;
+  padding-right: 1rem;
+  animation: backgroundCycle 8s infinite;
+}
+
+.prophecy-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  animation: colorCycle 6s infinite;
+  word-wrap: break-word;
+  color: var(--mcdonalds-red);
+  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--mcdonalds-yellow);
+}
+
+.mindleaks {
+  border: 5px solid var(--mcdonalds-yellow);
+  padding: 1rem;
+  background: rgba(255, 0, 0, 0.8);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 30px var(--mcdonalds-yellow);
+  transform: rotate(-0.5deg);
+  animation: pulse 3s infinite;
+  backdrop-filter: blur(1px);
+}
+
+.mindleak-button {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 3px solid var(--mcdonalds-red);
+  background: var(--mcdonalds-yellow);
+  color: var(--mcdonalds-red);
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: pulse 1s infinite;
+  width: 100%;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--mcdonalds-yellow);
+  box-shadow: 0 0 20px var(--mcdonalds-red);
+}
+
+.mindleak-button:hover {
+  background: var(--mcdonalds-red);
+  color: var(--mcdonalds-yellow);
+  animation: shake 0.3s infinite, flash 0.1s infinite;
+  border-color: var(--mcdonalds-yellow);
+}
+
+.mindleak-result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid var(--mcdonalds-yellow);
+  color: var(--mcdonalds-yellow);
+  flex-grow: 1;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--mcdonalds-red);
+  animation: flash 3s infinite;
+}
+
+.floating-image-squares {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.floating-square {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  pointer-events: none;
+  border: 3px solid var(--mcdonalds-yellow);
+  border-radius: 15px;
+  box-shadow: 0 0 25px var(--mcdonalds-red);
+  animation: bounce 2s infinite, pulse 3s infinite;
+  transition: all 0.3s ease;
+}
+
+.floating-square:hover {
+  transform: scale(1.2) !important;
+  box-shadow: 0 0 40px var(--mcdonalds-yellow);
+  border-color: var(--mcdonalds-red);
+}
+
+.fake-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--mcdonalds-yellow), var(--mcdonalds-red));
+  border-top: 2px solid var(--mcdonalds-red);
+  display: flex;
+  align-items: center;
+  z-index: 300;
+  font-family: 'Fredoka One', cursive;
+  box-shadow: 0 -5px 20px var(--mcdonalds-red);
+}
+
+.taskbar-start {
+  padding: 0 1rem;
+}
+
+.start-button {
+  background: var(--mcdonalds-red);
+  color: var(--mcdonalds-yellow);
+  border: 2px solid var(--mcdonalds-yellow);
+  padding: 0.25rem 0.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+.taskbar-programs {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  overflow-x: auto;
+}
+
+.program-button {
+  background: var(--mcdonalds-yellow);
+  color: var(--mcdonalds-red);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--mcdonalds-red);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.program-button.active {
+  background: var(--mcdonalds-red);
+  color: var(--mcdonalds-yellow);
+  animation: flash 1s infinite;
+}
+
+.taskbar-tray {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--mcdonalds-red);
+  font-weight: bold;
+}
+
+.tray-icon {
+  font-size: 1.2rem;
+  animation: pulse 3s infinite;
+}
+
+.taskbar-time {
+  font-size: 0.9rem;
+  animation: flash 2s infinite;
+}
+
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.trail-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pulse 0.5s infinite;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.fein-mode-toggle {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, var(--mcdonalds-red), var(--mcdonalds-yellow));
+  border: 3px solid var(--mcdonalds-yellow);
+  color: var(--mcdonalds-red);
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Fredoka One', cursive;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 0.8rem;
+  animation: pulse 1s infinite;
+  box-shadow: 0 0 20px var(--mcdonalds-yellow);
+  text-shadow: 1px 1px 0 var(--mcdonalds-yellow);
+}
+
+.fein-mode-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.fein-mode-toggle:hover::before {
+  left: 100%;
+}
+
+.audio-toggle-btn {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, var(--mcdonalds-yellow), var(--mcdonalds-red));
+  border: 3px solid var(--mcdonalds-red);
+  color: var(--mcdonalds-red);
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.8rem;
+  animation: flash 2s infinite;
+  box-shadow: 0 0 20px var(--mcdonalds-red);
+  text-shadow: 1px 1px 0 var(--mcdonalds-yellow);
+}
+
+.fein-mode .glitch-background {
+  animation: backgroundCycle 0.5s infinite, shake 0.2s infinite;
+}
+
+.fein-mode-active {
+  animation: shake 0.2s infinite, flash 0.1s infinite;
+}
+
+.fein-mode .main-title {
+  animation: glitch 0.1s infinite, colorCycle 0.2s infinite, rotateSpin 2s infinite;
+}
+
+.fein-mode .nav-button {
+  animation: colorCycle 0.3s infinite, pulse 0.2s infinite, shake 0.1s infinite;
+}
+
+.fein-mode .floating-square {
+  animation: rotateSpin 0.5s infinite, bounce 0.3s infinite, pulse 0.2s infinite;
+}
+
+.see-too-much {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: backgroundCycle 0.5s infinite, shake 0.3s infinite;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.cursed-text {
+  font-size: 2rem;
+  color: var(--mcdonalds-red);
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: glitch 0.1s infinite, colorCycle 0.5s infinite, flash 0.2s infinite;
+  z-index: 10;
+  font-family: 'Nosifer', cursive;
+  text-shadow: 3px 3px 0 var(--mcdonalds-yellow);
+}
+
+.visual-chaos {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.chaos-frog {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  animation: float 1s infinite linear, rotateSpin 0.5s infinite, flash 0.3s infinite;
+  border: 3px solid var(--mcdonalds-yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 30px var(--mcdonalds-red);
+}
+
+.escape-button {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background: var(--mcdonalds-red);
+  color: var(--mcdonalds-yellow);
+  border: 5px solid var(--mcdonalds-yellow);
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 100;
+  animation: pulse 0.2s infinite, shake 0.1s infinite, flash 0.3s infinite;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 var(--mcdonalds-red);
+  box-shadow: 0 0 30px var(--mcdonalds-yellow);
+}
+
+.escape-button:hover {
+  animation: shake 0.05s infinite, flash 0.1s infinite;
+  background: var(--mcdonalds-yellow);
+  color: var(--mcdonalds-red);
+}
+
+.footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: 3px solid var(--mcdonalds-yellow);
+  color: var(--mcdonalds-yellow);
+  font-size: 0.8rem;
+  animation: colorCycle 5s infinite, flash 3s infinite;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 var(--mcdonalds-red);
+  background: rgba(255, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-buttons {
+    flex-direction: column;
+  }
+  
+  .main-title {
+    font-size: 3rem;
+  }
+  
+  .main-title-sub {
+    font-size: 2rem;
+  }
+  
+  .video-container {
+    max-width: 100%;
+  }
+}
+
+.x-community-button {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  border: 5px solid var(--mcdonalds-yellow);
+  background: var(--mcdonalds-red);
+  color: var(--mcdonalds-yellow);
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: pulse 2s infinite;
+  position: relative;
+  overflow: hidden;
+  transform: skew(-5deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 var(--mcdonalds-red);
+  box-shadow: 0 0 30px var(--mcdonalds-yellow);
+}
+
+.x-community-button:hover, .x-community-button:focus {
+  background: var(--mcdonalds-yellow);
+  color: var(--mcdonalds-red);
+  animation: shake 0.5s infinite, flash 0.2s infinite;
+  box-shadow: 0 0 40px var(--mcdonalds-red);
+  border-color: var(--mcdonalds-red);
+}
+
+.x-community-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.5s;
+}
+
+.x-community-button:hover::before {
+  left: 100%;
+}
+
+/* Telegram Button Specific Styling */
+.telegram-button {
+  background: linear-gradient(45deg, var(--telegram-blue), var(--mcdonalds-yellow)) !important;
+  border-color: var(--telegram-blue) !important;
+  color: white !important;
+  box-shadow: 0 0 30px var(--telegram-blue) !important;
+}
+
+.telegram-button:hover, .telegram-button:focus {
+  background: linear-gradient(45deg, var(--mcdonalds-yellow), var(--telegram-blue)) !important;
+  color: var(--telegram-blue) !important;
+  border-color: var(--mcdonalds-yellow) !important;
+  box-shadow: 0 0 40px var(--mcdonalds-yellow) !important;
+}
